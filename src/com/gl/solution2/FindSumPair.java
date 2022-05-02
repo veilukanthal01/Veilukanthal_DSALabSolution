@@ -9,6 +9,7 @@ public class FindSumPair {
 	};
 
 	static Node NewNode(int data) {
+
 		Node temp = new Node();
 		temp.data = data;
 		temp.left = null;
@@ -26,6 +27,9 @@ public class FindSumPair {
 		return root;
 	}
 
+	// traverse binary search tree by inorder way and insert node’s value into a
+	// set. Also check for any node, difference between given sum and node’s value
+	// in set, if it is found then pair exists otherwise it doesn’t exist.
 	static boolean findpairUtil(Node root, int sum, HashSet<Integer> set) {
 		if (root == null)
 			return false;
